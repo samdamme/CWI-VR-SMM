@@ -1199,6 +1199,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: tcp://localhost:9900
       objectReference: {fileID: 0}
+    - target: {fileID: 3639109724272916727, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667655921246338097, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5707680166055793319, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
       propertyPath: player
       value: 
@@ -1298,6 +1306,18 @@ PrefabInstance:
     - target: {fileID: 6457971033183718167, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7117096098916499166, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602017659211312508, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154079424757839770, guid: 50281900da061ff41b77e212fa1ab6f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

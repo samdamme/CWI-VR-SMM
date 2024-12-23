@@ -1,0 +1,56 @@
+{
+  "_unused_orchestratorURL" : "http://192.16.197.145:8090",
+  "statsOutputFile" : "",
+  "_AutoStart" : {
+  	"autoLogin" : true,
+  	"sessionName" : "MediaScape",
+  	"sessionScenario" : "",
+  	"sessionTransportProtocol" : "socketio",
+  	"sessionUncompressed" : false,
+  	"sessionUncompressedAudio" : false,
+  	"autoCreateForUser" : "topinambur",
+  	"autoCreate" : false,
+  	"autoJoin" : false,
+  	"autoStartWith" : 2,
+  	"autoDelay" : 1.5,
+  	"autoLeaveAfter" : 0,
+  	"autoStopAfterLeave" : false
+  },
+  "LocalUser": {
+    "orchestratorConfigFilename" : "config-user.json",
+    "PCSelfConfig": {
+	  "capturerTypeName" : "developer",
+      "RS2ReaderConfig": {
+        "configFilename": "./cameraconfig.json"
+      },
+      "SynthReaderConfig": {
+        "nPoints": 16000
+      },
+      "ProxyReaderConfig": {
+        "localIP": "",
+        "port": 9335
+      },
+	  "PrerecordedReaderConfig" : {
+		"folder" : "../cwipc_test/Samples/loot-150K-4tiles"
+	  },
+      "voxelSize": 0,
+      "frameRate": 15,
+      "tiled": false,
+      "Encoders": [
+		
+		{
+          "octreeBits": 9
+        }
+
+      ],
+      "Bin2Dash": {
+        "segmentSize": 1000,
+        "segmentLife": 16000
+      },
+      "AudioBin2Dash": {
+        "segmentSize": 1000,
+        "segmentLife": 16000
+      }
+    }
+  }
+}
