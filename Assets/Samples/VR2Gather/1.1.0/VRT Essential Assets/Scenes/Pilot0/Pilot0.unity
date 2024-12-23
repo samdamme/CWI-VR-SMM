@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65518955}
   m_Layer: 0
-  m_Name: --------ENVIROMENT--------
+  m_Name: --------ENVIRONMENT--------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,15 +595,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.014
+      value: 0.0891
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2767
+      value: 1.2232
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0471
+      value: -0.1989
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalRotation.w
@@ -725,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.212
+      value: 1.1645
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.z
@@ -890,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.212
+      value: 1.1877
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1106,6 +1106,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 590088536}
     m_Modifications:
+    - target: {fileID: 164917518, guid: 631d44ab29db22c4d8601bb2880b38a6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5374466511482497580, guid: 631d44ab29db22c4d8601bb2880b38a6, type: 3}
       propertyPath: m_Name
       value: PFB_Table_1
@@ -1307,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.212
+      value: 1.167
       objectReference: {fileID: 0}
     - target: {fileID: 2125739197500702209, guid: eab08261bfa807e4cb8a71883e97d728, type: 3}
       propertyPath: m_LocalPosition.z
