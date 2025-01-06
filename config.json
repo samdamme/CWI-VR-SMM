@@ -1,10 +1,10 @@
 {
   "_unused_orchestratorURL" : "http://192.16.197.145:8090",
   "statsOutputFile" : "",
-  "_AutoStart" : {
+  "AutoStart" : {
   	"autoLogin" : true,
-  	"sessionName" : "MediaScape",
-  	"sessionScenario" : "",
+  	"sessionName" : "SMM-test-sessie",
+  	"sessionScenario" : "SMM",
   	"sessionTransportProtocol" : "socketio",
   	"sessionUncompressed" : false,
   	"sessionUncompressedAudio" : false,
