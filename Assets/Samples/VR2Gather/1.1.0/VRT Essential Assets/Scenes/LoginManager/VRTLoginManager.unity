@@ -903,7 +903,7 @@ MonoBehaviour:
     maxPlayoutLatency: 0.066
     maxPlayoutAhead: 0.066
     preparerQueueSize: 0
-    ignoreSynchronizer: 1
+    ignoreSynchronizer: 0
   Synchronizer:
     debugSynchronizer: 0
     debugJitterBuffer: 0
@@ -941,7 +941,7 @@ MonoBehaviour:
       Encoders:
       - octreeBits: 9
     PositionTracker:
-      outputFile: 
+      outputFile: Assets/Resources/position_tracking/{time}.json
       outputIntervalOverride: 0
       inputFile: 
   configOverrideFilename: 

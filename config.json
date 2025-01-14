@@ -37,7 +37,7 @@
       "frameRate": 15,
       "tiled": false,
       "Encoders": [
-		
+
 		{
           "octreeBits": 9
         }
