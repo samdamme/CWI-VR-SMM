@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 1542001136}
   - component: {fileID: 1542001137}
   - component: {fileID: 1542001134}
+  - component: {fileID: 1542001138}
   m_Layer: 0
   m_Name: VRTInitializer
   m_TagString: Untagged
@@ -941,7 +942,7 @@ MonoBehaviour:
       Encoders:
       - octreeBits: 9
     PositionTracker:
-      outputFile: Assets/Resources/position_tracking/{time}.json
+      outputFile: CWI-VR-SMM_Data/position_tracking/{time}.json
       outputIntervalOverride: 0
       inputFile: 
   configOverrideFilename: 
@@ -958,6 +959,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nativeLibraries: {fileID: 11400000, guid: 0135e1be77466cc4daac21b2c7274297, type: 2}
+--- !u!114 &1542001138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542001133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2ecb37be9d09348a2c12bed11a5190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &1673771068
 LightingSettings:
   m_ObjectHideFlags: 0
