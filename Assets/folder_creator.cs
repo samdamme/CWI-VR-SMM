@@ -7,7 +7,7 @@ public class folder_creator : MonoBehaviour
 {
     private void Awake()
     {
-        string pt_folder = "./CWI-VR-SMM_Data/position_tracking/";
+        string pt_folder = Application.persistentDataPath+"/position_tracking/";
         FileInfo file = new FileInfo(pt_folder);
         file.Directory.Create();
     }

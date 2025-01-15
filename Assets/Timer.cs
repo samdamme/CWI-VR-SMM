@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         starttime = DateTime.Now.ToString().Replace("/", "_").Replace(" ", "_").Replace(":", "_");
-        outputfile = "./CWI-VR-SMM_Data/timing/"+starttime+".txt";
+        outputfile = Application.persistentDataPath+"/timing/"+starttime+".txt";
         FileInfo file = new FileInfo(outputfile);
         file.Directory.Create();
         writer = new StreamWriter(outputfile);
