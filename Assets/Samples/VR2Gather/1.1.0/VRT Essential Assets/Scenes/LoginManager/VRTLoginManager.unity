@@ -942,7 +942,7 @@ MonoBehaviour:
       Encoders:
       - octreeBits: 9
     PositionTracker:
-      outputFile: CWI-VR-SMM_Data/position_tracking/{time}.json
+      outputFile: CWI-VR-SMM_Data/position_tracking_{time}.json
       outputIntervalOverride: 0
       inputFile: 
   configOverrideFilename: 
