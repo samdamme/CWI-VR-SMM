@@ -44,7 +44,6 @@ public class Timer : MonoBehaviour
     }
     private void OnDestroy()
     {
-        UnityEngine.Debug.Log("OnDestroy()");
         timer.Stop();
         writeTimer("DESTROY");
         writer.Close();
