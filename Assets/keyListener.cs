@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class keyListener : MonoBehaviour
@@ -25,28 +24,7 @@ public class keyListener : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Detected key code: " + KeyCode.Q);
-            if (Application.isEditor)
-            {
-                EditorApplication.ExitPlaymode();
-            }
-            else
-            {
-                Application.Quit();
-            }
+            Application.Quit();
         }
-        /*Event e = Event.current;
-        if (e!=null && e.type==EventType.KeyDown)
-        {
-            Debug.Log("Detected key code: " + e.keyCode);
-
-            if (e.keyCode == KeyCode.Space)
-            {
-                timer.buttonPress();
-            }
-            if (e.keyCode == KeyCode.Q)
-            {
-                Application.Quit();
-            }
-        }*/
     }
 }
