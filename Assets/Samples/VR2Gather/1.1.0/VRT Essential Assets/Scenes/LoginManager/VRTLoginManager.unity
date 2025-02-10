@@ -900,15 +900,15 @@ MonoBehaviour:
     preparerQueueSize: 0
   Voice:
     audioFps: 50
-    maxPlayoutLatency: 0.066
+    maxPlayoutLatency: 1.2
     maxPlayoutAhead: 0.066
     preparerQueueSize: 0
     ignoreSynchronizer: 0
   Synchronizer:
     debugSynchronizer: 0
     debugJitterBuffer: 0
-    minLatency: 100
-    maxLatency: 5000
+    minLatency: 1200
+    maxLatency: 1500
     latencyMaxDecrease: 1
     latencyMaxIncrease: 33
     acceptDesyncOnDataUnavailable: 0
