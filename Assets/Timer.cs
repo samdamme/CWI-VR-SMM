@@ -38,14 +38,25 @@ public class Timer : MonoBehaviour
         writer.WriteLine(label+": "+elapsedTime);
     }
 
-    public void buttonPress()
+    public void mark()
     {
-        writeTimer("BUTTON_PRESS");
+        writeTimer("MARKER");
     }
+
+    public void pause()
+    {
+        writeTimer("PAUSED");
+    }
+
+    public void restart()
+    {
+        writeTimer("RESTARTED");
+    }
+
     private void OnDestroy()
     {
         timer.Stop();
-        writeTimer("DESTROY");
+        writeTimer("END");
         writer.Close();
     }
 }

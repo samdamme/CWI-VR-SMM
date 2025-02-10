@@ -18,7 +18,19 @@ public class keyListener : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Detected key code: " + KeyCode.Space);
-            timer.buttonPress();
+            timer.mark();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("Detected key code: " + KeyCode.P);
+            timer.pause();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Detected key code: " + KeyCode.R);
+            timer.restart();
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
