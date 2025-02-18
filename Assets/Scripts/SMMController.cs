@@ -68,10 +68,9 @@ public class SMMController : PilotController
                 UnityEngine.Debug.Log("SMMController: VRTSynchronizer: " + sync);
                 if (sync != null)
                 {
-                    Debug.LogError("SMMController: VRTSynchronizer not found");
-                }
-                sync.requestNonAudioBehindMs = pc_latency_ms;
-                sync.requestAudioBehindMs = voice_latency_ms;
+                    sync.requestNonAudioBehindMs = pc_latency_ms;
+                    sync.requestAudioBehindMs = voice_latency_ms;
+                }          
             }
             UnityEngine.Debug.Log("SMMController: pc_latency_ms: " + pc_latency_ms + " voice_latency_ms: " + voice_latency_ms);
         }
