@@ -13,11 +13,12 @@ public class SMMController : PilotController
     private int pc_latency_ms;
     private int voice_latency_ms;
     private bool isMaster;
-    private string configFile = "config.json";
+    private string configFile = VRTConfig.ConfigFilename("config.json");
 
     public override void Start()
     {
         base.Start();
+        Debug.Log("SMMController: configFile: " + configFile);
         StartCoroutine(SetLatencies());
     }
 
@@ -26,8 +27,8 @@ public class SMMController : PilotController
         yield return new WaitForSeconds(1);
         UnityEngine.Debug.Log("SetLatencies - after wait");
         isMaster = OrchestratorController.Instance.UserIsMaster;
-        /*try
-        {*/
+        try
+        {
             string json = File.ReadAllText(configFile);
             var config = JsonSerializer.Deserialize<JsonElement>(json);
             var latencies = config.GetProperty("Latencies").EnumerateArray().ToList();
@@ -61,16 +62,23 @@ public class SMMController : PilotController
                 }
             }
 
-            VRTSynchronizer sync = OtherGO.GetComponentInChildren<VRTSynchronizer>();
-            UnityEngine.Debug.Log("SMMController: VRTSynchronizer: " + sync);
-            sync.requestNonAudioBehindMs = pc_latency_ms;
-            sync.requestAudioBehindMs = voice_latency_ms;
+            if (OtherGO != null)
+            {
+                VRTSynchronizer sync = OtherGO.GetComponentInChildren<VRTSynchronizer>();
+                UnityEngine.Debug.Log("SMMController: VRTSynchronizer: " + sync);
+                if (sync != null)
+                {
+                    Debug.LogError("SMMController: VRTSynchronizer not found");
+                }
+                sync.requestNonAudioBehindMs = pc_latency_ms;
+                sync.requestAudioBehindMs = voice_latency_ms;
+            }
             UnityEngine.Debug.Log("SMMController: pc_latency_ms: " + pc_latency_ms + " voice_latency_ms: " + voice_latency_ms);
-        /*}
+        }
         catch (Exception e)
         {
             UnityEngine.Debug.Log($"Error reading JSON file: {e.Message}");
-        }*/
+        }
         
     }
 }
