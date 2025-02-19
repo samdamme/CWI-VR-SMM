@@ -27,13 +27,16 @@ public class SMMController : PilotController
         yield return new WaitForSeconds(1);
         UnityEngine.Debug.Log("SMMController: SetLatencies - after wait");
         isMaster = OrchestratorController.Instance.UserIsMaster;
+        UnityEngine.Debug.Log("SMMController: isMaster: " + isMaster);
         try
         {
             string json = File.ReadAllText(configFile);
+            UnityEngine.Debug.Log("SMMController: json: " + json);
             var config = JsonSerializer.Deserialize<JsonElement>(json);
+            UnityEngine.Debug.Log("SMMController: config: " + config);
             var latencies = config.GetProperty("Latencies").EnumerateArray().ToList();
-
-            UnityEngine.Debug.Log("SMMController: isMaster: "+isMaster);
+            UnityEngine.Debug.Log("SMMController: latencies: " + latencies);
+ 
             if (isMaster)          
             {
                 var latencyTuple = latencies[0];
