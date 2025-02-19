@@ -14,17 +14,18 @@ public class SMMController : PilotController
     private int voice_latency_ms;
     private bool isMaster;
     private string configFile = VRTConfig.ConfigFilename("config.json");
+    private int waitForSeconds = 1;
 
     public override void Start()
     {
         base.Start();
         Debug.Log("SMMController: configFile: " + configFile);
-        /*StartCoroutine(SetLatencies());
+        StartCoroutine(SetLatencies(waitForSeconds));
     }
 
-    IEnumerator SetLatencies() {
+    IEnumerator SetLatencies(int waitForSeconds) {
         UnityEngine.Debug.Log("SMMController: SetLatencies");
-        yield return new WaitForSeconds(1);*/
+        yield return new WaitForSeconds(waitForSeconds);
         UnityEngine.Debug.Log("SMMController: SetLatencies - after wait");
         isMaster = OrchestratorController.Instance.UserIsMaster;
         UnityEngine.Debug.Log("SMMController: isMaster: " + isMaster);
