@@ -19,12 +19,12 @@ public class SMMController : PilotController
     {
         base.Start();
         Debug.Log("SMMController: configFile: " + configFile);
-        StartCoroutine(SetLatencies());
+        /*StartCoroutine(SetLatencies());
     }
 
     IEnumerator SetLatencies() {
         UnityEngine.Debug.Log("SMMController: SetLatencies");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);*/
         UnityEngine.Debug.Log("SMMController: SetLatencies - after wait");
         isMaster = OrchestratorController.Instance.UserIsMaster;
         UnityEngine.Debug.Log("SMMController: isMaster: " + isMaster);
