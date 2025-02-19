@@ -2848,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5178981012210375756, guid: 9908dcf284aef0e4a8ba245dc5f0f080, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5706222702953903087, guid: 9908dcf284aef0e4a8ba245dc5f0f080, type: 3}
       propertyPath: NetworkId
@@ -2876,7 +2876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8213689654333099559, guid: 9908dcf284aef0e4a8ba245dc5f0f080, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9
+      value: -0.3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2108755284289232089, guid: 9908dcf284aef0e4a8ba245dc5f0f080, type: 3}
