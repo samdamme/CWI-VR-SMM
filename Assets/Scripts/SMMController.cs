@@ -23,9 +23,9 @@ public class SMMController : PilotController
     }
 
     IEnumerator SetLatencies() {
-        UnityEngine.Debug.Log("SetLatencies");
+        UnityEngine.Debug.Log("SMMController: SetLatencies");
         yield return new WaitForSeconds(1);
-        UnityEngine.Debug.Log("SetLatencies - after wait");
+        UnityEngine.Debug.Log("SMMController: SetLatencies - after wait");
         isMaster = OrchestratorController.Instance.UserIsMaster;
         try
         {
@@ -33,8 +33,8 @@ public class SMMController : PilotController
             var config = JsonSerializer.Deserialize<JsonElement>(json);
             var latencies = config.GetProperty("Latencies").EnumerateArray().ToList();
 
-            if (isMaster)
-            
+            UnityEngine.Debug.Log("SMMController: isMaster: "+isMaster);
+            if (isMaster)          
             {
                 var latencyTuple = latencies[0];
                 pc_latency_ms = latencyTuple.GetProperty("pc_latency_ms_master").GetInt32();
@@ -49,6 +49,8 @@ public class SMMController : PilotController
             GameObject SelfGO = SessionPlayersManager.Instance.localPlayer;
             GameObject OtherGO = null;
 
+            UnityEngine.Debug.Log("SMMController: SelfGO: " + SelfGO);
+
             foreach (PlayerNetworkControllerBase pncb in SessionPlayersManager.Instance.AllUsers)
             {
                 GameObject go = pncb.BodyTransform.gameObject;
@@ -61,6 +63,7 @@ public class SMMController : PilotController
                     OtherGO = go;
                 }
             }
+            UnityEngine.Debug.Log("SMMController: OtherGO: " + OtherGO);
 
             if (OtherGO != null)
             {
@@ -76,7 +79,7 @@ public class SMMController : PilotController
         }
         catch (Exception e)
         {
-            UnityEngine.Debug.Log($"Error reading JSON file: {e.Message}");
+            UnityEngine.Debug.Log($"SMMController: ERROR: {e.Message}");
         }
         
     }
